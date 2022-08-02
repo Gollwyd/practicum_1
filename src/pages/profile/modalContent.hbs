@@ -1,0 +1,19 @@
+<div class="profile_modal">
+    {{#if showError}}
+        <h3 class="red">{{error}}</h3>
+    {{else}}
+        <h3>{{title}}</h3>
+    {{/if}}
+
+    <input id="avatar" type="file" name="avatar" >
+    <label class="input_label" for="avatar">Выбрать файл на компьютере</label>
+
+    <div>
+        <div class="buttonWrapper">
+            {{>mainButton label='Поменять' }}
+        </div>
+        <p class="warning">{{warning}}</p>
+    </div>
+</div>
+
+         
