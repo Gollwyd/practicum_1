@@ -1,0 +1,38 @@
+.form-input {
+	position: relative;
+	margin: 5px;
+	padding-top: 15px;
+
+	input {
+		width: 100%;
+		padding: 0 0 7px 0;
+		border: none;
+		outline: none;
+		border-bottom: 1px solid #3369F3;
+		box-sizing: border-box;
+		font-size: 13px;
+		position: relative;
+		z-index: 5;
+		background: none;
+	}
+
+	input:focus ~ label, input:valid ~ label  {
+		top: 0px;
+		font-size: 9px;
+	}
+
+	label {
+		position: absolute;
+		left: 0;
+		top: 17px;
+		transition: ease-out .15s;
+		color: #999;
+	}
+}
+
+.error-label {
+	color: red;
+	margin-top: 7px;
+	width: 400;
+	font-size: 8px;
+}

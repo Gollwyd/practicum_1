@@ -1,0 +1,42 @@
+<div class="profile_container">
+   <div class="profile_wrapper">
+       <div class="profile_avatarWrapper">
+            <img
+                width="130px"
+                height="130px"
+                src={{data.avatar}} >
+            <div class="profile_changeAvatarLayer">
+                <span>Поменять аватар</span>
+            </div>
+       </div>
+       
+        <h2>{{data.display_name}}</h2>
+        <div class="profile_form">
+            {{#if changePassword}}
+                {{>profileInput  name='oldPassword' type='password' label="Старый пароль" required=true error=oldPasswordError}}
+                {{>profileInput  name='newPassword' type='password' label="Новый пароль" required=true error=newPasswordError}}
+                {{>profileInput  name='newPassword2' type='password' label="Повторите новый пароль" required=true error=newPassword2Error}}
+            {{else}}
+                {{>profileInput name='email' label="Почта" required=true type='email' value=data.email readonly=readonly}}
+                {{>profileInput name='login' label="Логин" required=true type='text' value=data.login readonly=readonly}}
+                {{>profileInput name='first_name' label="Имя" required=true type='text' value=data.first_name readonly=readonly}}
+                {{>profileInput name='second_name' label="Фамилия" required=true type='text' value=data.second_name readonly=readonly}}
+                {{>profileInput name='display_name' label="Имя в чате" required=true type='text' value=data.display_name readonly=readonly}}
+                {{>profileInput name='phone' label="Телефон" required=true type='text' value=data.phone readonly=readonly}}
+            {{/if}}
+        </div>
+         <div class="profile_buttons">
+        {{#if readonly}}
+            {{>secondButton label='Изменить данные' class='secondButton_wrapper--profile'}}
+            {{>secondButton label='Изменить пароль' class='secondButton_wrapper--profile'}}
+            {{>secondButton label='Выйти' class='red secondButton_wrapper--profile'}}
+        {{else}}
+            {{>mainButton label='Сохранить'}}
+        {{/if}}
+        </div>
+   </div>
+</div>
+
+{{#if showModal}}
+    {{{modal}}}
+{{/if}}

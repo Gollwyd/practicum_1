@@ -1,0 +1,10 @@
+<div class="chat_container">
+    <section class="chat_list">
+        <p class="chat_profile-link">Профиль ></p>
+        {{>searchBar}}
+        {{#each chatList}}
+            {{> chatItem data=data}}
+        {{/each}}
+    </section>
+    <section class="chat_wrapper"></section>
+</div>
