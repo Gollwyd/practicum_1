@@ -13,10 +13,6 @@
   },
   "author": "",
   "license": "ISC",
-  "engines" : { 
-    "npm" : ">=7.0.0",
-    "node" : ">=16.0.0"
-  },
   "devDependencies": {
     "@parcel/transformer-inline-string": "^2.4.1",
     "@parcel/transformer-less": "2.6.2",
