@@ -4,4 +4,3 @@ import './styles.less';
 
 Handlebars.registerPartial('searchBar', tpl);
 
-// export default (label) => tpl({ label });
