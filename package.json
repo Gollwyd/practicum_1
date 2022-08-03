@@ -26,6 +26,7 @@
     }
   },
   "dependencies": {
+    "dotenv": "16.0.1",
     "handlebars": "4.7.7"
   }
 }
